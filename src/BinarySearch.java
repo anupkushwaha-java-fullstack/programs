@@ -2,8 +2,8 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {2,4,5,9,12,14,16,19,20,45,55};
-        int answer = binarySearch(arr,12);
-        System.out.println(" answer::: " + answer);
+        int answer = binarySearch(arr,16);
+        System.out.println("answer:: " + answer);
     }
 
     public static int binarySearch(int[] arr, int target) {

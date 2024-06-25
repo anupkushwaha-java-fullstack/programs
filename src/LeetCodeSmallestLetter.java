@@ -1,12 +1,13 @@
 public class LeetCodeSmallestLetter {
 
+    // https://leetcode.com/problems/find-smallest-letter-greater-than-target/
     public static void main(String[] args) {
         char[] arr = { 'c','d','j'};
-        char answer = findSmallestLetter(arr,'j');
+        char answer = nextGreatestLetter(arr,'j');
         System.out.println("answer::: " + answer);
     }
 
-    public static char findSmallestLetter(char[] letters, char target) {
+    public static char nextGreatestLetter(char[] letters, char target) {
             int start = 0;
             int end = letters.length-1;
             while(start <= end) {
