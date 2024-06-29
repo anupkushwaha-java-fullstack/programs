@@ -11,30 +11,29 @@ public class LeetCodeNosDisappearedInArray {
 
     private static List<Integer> missingNumber(int[] nums) {
         int[] result = sort(nums);
-        List<Integer> disAppeared = new ArrayList<>();
+        List<Integer> integers = new ArrayList<>();
         for (int index = 0; index < result.length; index++){
             if(result[index] != index + 1){
-                 disAppeared.add(index + 1);
+                 integers.add(index + 1);
             }
         }
-        return disAppeared;
+        return integers;
     }
 
     public static int[] sort(int[] nums) {
         int i = 0;
-        while(i < nums.length){
-            int correctIndex = nums[i] -1 ;
-            if (nums[i] < nums.length &&  nums[i] != nums[correctIndex]) {
-                swapElement(nums, i,correctIndex);
-            }else{
+        while (i < nums.length) {
+            int correctIndex = nums[i] - 1;
+            if (nums[i] != nums[correctIndex]) {
+                swap(nums, i , correctIndex);
+            } else {
                 i++;
             }
         }
         return nums;
     }
 
-    public static void swapElement(int[] arr, int first, int second){
-
+    static void swap(int[] arr, int first, int second) {
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
