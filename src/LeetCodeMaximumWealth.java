@@ -1,5 +1,6 @@
 public class LeetCodeMaximumWealth {
 
+    // https://leetcode.com/problems/richest-customer-wealth/
     public static void main(String[] args) {
 
         int[][] numbers = {
