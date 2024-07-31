@@ -20,7 +20,7 @@ public class TwoSumProblem {
         }
 
         Map<Integer,Integer> integerMap = new HashMap<>();
-        for(int i = 0; i < nums.length-1; i++ ) {
+        for(int i = 0; i < nums.length; i++ ) {
             int complement = target - nums[i];
 
             if(integerMap.containsKey(complement)){
